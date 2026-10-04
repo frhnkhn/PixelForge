@@ -169,9 +169,6 @@ Provide complete beginner-friendly setup instructions for macOS/Linux and Window
 
 1. Clone repository:
 
-git clone https://github.com/YOUR_USERNAME/PixelForge.git
-cd PixelForge
-
 2. Create virtual environment:
 
 python3 -m venv venv
