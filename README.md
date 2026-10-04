@@ -1,6 +1,3 @@
-Create a professional, detailed README.md for my GitHub project called "PixelForge — Multimodal AI Image Generation Studio".
-
-Use the following project information exactly and organize it professionally:
 
 PROJECT NAME:
 PixelForge
@@ -321,29 +318,3 @@ Mention these learning areas:
 - Frontend/backend communication
 - Secure API key management
 - Local image storage
-
-AUTHOR:
-Farhan Khan
-
-Course:
-B.Tech CSE — Gaming Technology
-
-College:
-SRM Institute of Science and Technology
-
-LICENSE:
-State that the project is created for educational and project-development purposes.
-
-README STYLE REQUIREMENTS:
-- Make it look professional and GitHub-ready.
-- Use appropriate emojis in headings but do not overuse them.
-- Use Markdown tables where useful.
-- Use code blocks for commands and architecture.
-- Add clear section headings.
-- Keep explanations beginner-friendly but technically accurate.
-- Make the README detailed enough for a college project/hackathon submission.
-- Do not invent technologies, features, APIs, or functionality that are not listed above.
-- Do not include any real API key.
-- Do not include fake screenshots or fake GitHub links.
-- Use YOUR_USERNAME as a placeholder for the GitHub username.
-- Output ONLY the complete README.md content, ready to copy and paste into a README.md file.
