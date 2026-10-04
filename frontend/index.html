@@ -1,0 +1,860 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="PixelForge — AI-powered multimodal image generation studio"
+    >
+
+    <meta
+        name="theme-color"
+        content="#08090d"
+    >
+
+    <title>
+        PixelForge — AI Image Studio
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="/style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         NAVBAR
+    ====================================================== -->
+
+    <header class="navbar">
+
+        <div class="logo">
+
+            <span class="logo-symbol">
+                ✦
+            </span>
+
+            PixelForge
+
+        </div>
+
+
+        <div class="nav-status">
+
+            <span class="status-dot"></span>
+
+            AI ENGINE ONLINE
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =====================================================
+         MAIN
+    ====================================================== -->
+
+    <main class="container">
+
+
+        <!-- =================================================
+             HERO
+        ================================================== -->
+
+        <section class="hero">
+
+            <div class="hero-badge">
+                GENERATIVE AI STUDIO
+            </div>
+
+
+            <h1>
+
+                Turn words into
+                <span>visuals.</span>
+
+            </h1>
+
+
+            <p>
+
+                Describe your imagination and let PixelForge
+                transform your ideas into AI-generated artwork.
+
+            </p>
+
+        </section>
+
+
+
+        <!-- =================================================
+             GENERATOR
+        ================================================== -->
+
+        <section class="generator-card">
+
+
+            <!-- PROMPT -->
+
+            <div class="section-title">
+
+                <div>
+
+                    <span class="number">
+                        01
+                    </span>
+
+                    <h2>
+                        Describe your vision
+                    </h2>
+
+                </div>
+
+
+                <span class="required">
+                    REQUIRED
+                </span>
+
+            </div>
+
+
+            <textarea
+                id="prompt"
+                placeholder="Describe the image you want to create..."
+                maxlength="10000"
+            ></textarea>
+
+
+            <div class="prompt-footer">
+
+                <span>
+                    Be descriptive for better results
+                </span>
+
+
+                <span id="character-count">
+                    0 / 10000
+                </span>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 PRESET PROMPTS
+            ================================================== -->
+
+            <div class="preset-section">
+
+                <div class="preset-title">
+
+                    Quick presets
+
+                </div>
+
+
+                <div class="preset-grid">
+
+
+                    <button
+                        type="button"
+                        class="preset-btn"
+                        data-preset="cyberpunk"
+                    >
+                        ⚡ Cyberpunk
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="preset-btn"
+                        data-preset="fantasy"
+                    >
+                        🐉 Fantasy
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="preset-btn"
+                        data-preset="anime"
+                    >
+                        ✦ Anime
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="preset-btn"
+                        data-preset="cinematic"
+                    >
+                        🎬 Cinematic
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="preset-btn"
+                        data-preset="product"
+                    >
+                        ◇ Product
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="preset-btn"
+                        data-preset="architecture"
+                    >
+                        ▦ Architecture
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="preset-btn"
+                        data-preset="portrait"
+                    >
+                        ◎ Portrait
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="preset-btn"
+                        data-preset="nature"
+                    >
+                        ◌ Nature
+                    </button>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- SETTINGS -->
+
+            <div class="section-title settings-title">
+
+                <div>
+
+                    <span class="number">
+                        02
+                    </span>
+
+                    <h2>
+                        Generation settings
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <div class="settings-grid">
+
+
+                <!-- STYLE -->
+
+                <div class="setting">
+
+                    <label for="style">
+                        Style
+                    </label>
+
+
+                    <select id="style">
+
+                        <option value="cinematic">
+                            Cinematic
+                        </option>
+
+                        <option value="photographic">
+                            Photographic
+                        </option>
+
+                        <option value="digital-art">
+                            Digital Art
+                        </option>
+
+                        <option value="anime">
+                            Anime
+                        </option>
+
+                        <option value="fantasy-art">
+                            Fantasy Art
+                        </option>
+
+                        <option value="comic-book">
+                            Comic Book
+                        </option>
+
+                        <option value="pixel-art">
+                            Pixel Art
+                        </option>
+
+                        <option value="neon-punk">
+                            Neon Punk
+                        </option>
+
+                        <option value="3d-model">
+                            3D Model
+                        </option>
+
+                        <option value="line-art">
+                            Line Art
+                        </option>
+
+                        <option value="low-poly">
+                            Low Poly
+                        </option>
+
+                        <option value="origami">
+                            Origami
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+
+                <!-- ASPECT RATIO -->
+
+                <div class="setting">
+
+                    <label for="aspect-ratio">
+                        Aspect Ratio
+                    </label>
+
+
+                    <select id="aspect-ratio">
+
+                        <option value="1:1">
+                            1:1 — Square
+                        </option>
+
+                        <option value="16:9">
+                            16:9 — Landscape
+                        </option>
+
+                        <option value="9:16">
+                            9:16 — Portrait
+                        </option>
+
+                        <option value="3:2">
+                            3:2
+                        </option>
+
+                        <option value="2:3">
+                            2:3
+                        </option>
+
+                        <option value="4:5">
+                            4:5
+                        </option>
+
+                        <option value="5:4">
+                            5:4
+                        </option>
+
+                        <option value="21:9">
+                            21:9 — Wide
+                        </option>
+
+                        <option value="9:21">
+                            9:21
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+
+                <!-- FORMAT -->
+
+                <div class="setting">
+
+                    <label for="format">
+                        Output Format
+                    </label>
+
+
+                    <select id="format">
+
+                        <option value="png">
+                            PNG
+                        </option>
+
+                        <option value="jpeg">
+                            JPEG
+                        </option>
+
+                        <option value="webp">
+                            WEBP
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- NEGATIVE PROMPT -->
+
+            <div class="negative-section">
+
+                <label for="negative-prompt">
+
+                    Negative Prompt
+
+                    <span>
+                        (optional)
+                    </span>
+
+                </label>
+
+
+                <input
+                    type="text"
+                    id="negative-prompt"
+                    placeholder="blurry, distorted, low quality, watermark..."
+                    maxlength="5000"
+                >
+
+            </div>
+
+
+
+            <!-- SEED -->
+
+            <div class="seed-section">
+
+                <div class="seed-header">
+
+                    <label for="seed">
+                        Seed
+                    </label>
+
+                    <span>
+                        Use 0 for random
+                    </span>
+
+                </div>
+
+
+                <div class="seed-row">
+
+                    <input
+                        type="number"
+                        id="seed"
+                        value="0"
+                        min="0"
+                        max="4294967295"
+                        placeholder="0"
+                    >
+
+
+                    <button
+                        type="button"
+                        id="random-seed"
+                        class="secondary-btn"
+                    >
+                        Random Seed
+                    </button>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- GENERATE -->
+
+            <button
+                id="generate-btn"
+                class="generate-btn"
+                type="button"
+            >
+
+                <span id="generate-icon">
+                    ✦
+                </span>
+
+
+                <span id="generate-text">
+                    Generate Image
+                </span>
+
+            </button>
+
+
+
+            <!-- ERROR -->
+
+            <div
+                id="error-message"
+                class="error-message hidden"
+                role="alert"
+            ></div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             RESULT
+        ================================================== -->
+
+        <section class="result-section">
+
+
+            <div class="result-header">
+
+                <div>
+
+                    <span class="number">
+                        03
+                    </span>
+
+                    <h2>
+                        Your creation
+                    </h2>
+
+                </div>
+
+
+                <span
+                    id="result-status"
+                    class="result-status"
+                >
+                    WAITING
+                </span>
+
+            </div>
+
+
+
+            <!-- EMPTY -->
+
+            <div
+                id="empty-state"
+                class="empty-state"
+            >
+
+                <div class="empty-icon">
+                    ✦
+                </div>
+
+
+                <h3>
+                    Your artwork will appear here
+                </h3>
+
+
+                <p>
+                    Enter a prompt above and generate your first image.
+                </p>
+
+            </div>
+
+
+
+            <!-- LOADING -->
+
+            <div
+                id="loading-state"
+                class="loading-state hidden"
+            >
+
+                <div class="loader"></div>
+
+
+                <h3>
+                    Creating your artwork...
+                </h3>
+
+
+                <p>
+                    The AI is turning your prompt into pixels.
+                </p>
+
+            </div>
+
+
+
+            <!-- RESULT -->
+
+            <div
+                id="image-result"
+                class="image-result hidden"
+            >
+
+                <div class="image-wrapper">
+
+                    <img
+                        id="generated-image"
+                        src=""
+                        alt="AI Generated Artwork"
+                    >
+
+                </div>
+
+
+
+                <!-- METADATA -->
+
+                <div class="image-info">
+
+
+                    <div class="info-item">
+
+                        <span>
+                            Prompt
+                        </span>
+
+                        <strong id="result-prompt">
+                            —
+                        </strong>
+
+                    </div>
+
+
+                    <div class="info-item">
+
+                        <span>
+                            Style
+                        </span>
+
+                        <strong id="result-style">
+                            —
+                        </strong>
+
+                    </div>
+
+
+                    <div class="info-item">
+
+                        <span>
+                            Resolution
+                        </span>
+
+                        <strong id="result-resolution">
+                            —
+                        </strong>
+
+                    </div>
+
+
+                    <div class="info-item">
+
+                        <span>
+                            Format
+                        </span>
+
+                        <strong id="result-format">
+                            —
+                        </strong>
+
+                    </div>
+
+
+                    <div class="info-item">
+
+                        <span>
+                            File Size
+                        </span>
+
+                        <strong id="result-size">
+                            —
+                        </strong>
+
+                    </div>
+
+
+                    <div class="info-item">
+
+                        <span>
+                            Generation Time
+                        </span>
+
+                        <strong id="result-time">
+                            —
+                        </strong>
+
+                    </div>
+
+
+                    <div class="info-item">
+
+                        <span>
+                            Seed
+                        </span>
+
+                        <strong id="result-seed">
+                            —
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- ACTIONS -->
+
+                <div class="result-actions">
+
+                    <a
+                        id="download-btn"
+                        class="download-btn"
+                        href="#"
+                        download
+                    >
+                        ↓ Download
+                    </a>
+
+
+                    <button
+                        id="copy-prompt-btn"
+                        class="secondary-btn"
+                        type="button"
+                    >
+                        Copy Prompt
+                    </button>
+
+
+                    <button
+                        id="regenerate-btn"
+                        class="secondary-btn"
+                        type="button"
+                    >
+                        ↻ Regenerate
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             HISTORY
+        ================================================== -->
+
+        <section class="history-section">
+
+
+            <div class="result-header">
+
+                <div>
+
+                    <span class="number">
+                        04
+                    </span>
+
+                    <h2>
+                        Generation history
+                    </h2>
+
+                </div>
+
+
+                <div class="history-controls">
+
+                    <button
+                        id="refresh-history"
+                        class="refresh-btn"
+                        type="button"
+                    >
+                        ↻ Refresh
+                    </button>
+
+
+                    <button
+                        id="clear-history"
+                        class="danger-btn"
+                        type="button"
+                    >
+                        Clear History
+                    </button>
+
+                </div>
+
+            </div>
+
+
+
+            <div
+                id="history-grid"
+                class="history-grid"
+            >
+
+                <div
+                    id="history-empty"
+                    class="history-empty"
+                >
+
+                    <div class="empty-icon">
+                        ✦
+                    </div>
+
+
+                    <p>
+                        Your generated images will appear here.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
+    <footer>
+
+        <p>
+            PixelForge · Multimodal Image Generation Studio
+        </p>
+
+
+        <p>
+            Powered by Generative AI
+        </p>
+
+    </footer>
+
+
+
+    <script src="/script.js"></script>
+
+</body>
+
+</html>
